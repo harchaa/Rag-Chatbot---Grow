@@ -15,7 +15,7 @@ import pytest
 from mf_assistant.ingestion import scraper
 from mf_assistant.ingestion.normalizer import normalize
 
-REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
 SOURCE = {
     "id": "test-fund",
     "url": "https://groww.in/mutual-funds/test-fund-direct-growth",

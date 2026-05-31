@@ -34,7 +34,7 @@ and are run with `pytest`; cases that can't be automated yet are checked manuall
 
 ---
 
-## Phase 1 — Data ingestion  ✅ *(tested in `tests/test_phase1_ingestion.py`)*
+## Phase 1 — Data ingestion  ✅ *(tested in `tests/phase1/test_ingestion.py`)*
 
 ### Scraper robustness
 | ID | Case | Expected | Status |
