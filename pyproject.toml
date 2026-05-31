@@ -1,0 +1,25 @@
+[project]
+name = "mf-facts-assistant"
+version = "0.1.0"
+description = "Facts-only RAG FAQ assistant for mutual fund schemes (Groww/HDFC corpus, Groq LLM)."
+requires-python = ">=3.11"
+readme = "README.md"
+# Runtime dependencies are managed in requirements.txt (application, not a library),
+# so `pip install -e .` stays fast and only installs the package itself.
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,52 @@
+# Curated corpus — the ONLY sources the assistant is allowed to cite.
+# The ingestion pipeline scrapes each URL into data/processed/<id>.json.
+# To grow/repoint the corpus, edit this file (no code change needed).
+#
+# Fields:
+#   id           short stable slug used for filenames
+#   scheme_name  human-friendly label (authoritative name is read from the page)
+#   category     equity | debt | hybrid | index | commodity
+#   url          official scheme page to scrape and cite
+
+amc: HDFC Mutual Fund
+
+sources:
+  - id: hdfc-mid-cap
+    scheme_name: HDFC Mid-Cap Fund (Direct, Growth)
+    category: equity
+    url: https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+
+  - id: hdfc-equity
+    scheme_name: HDFC Equity Fund (Direct, Growth)
+    category: equity
+    url: https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+
+  - id: hdfc-small-cap
+    scheme_name: HDFC Small Cap Fund (Direct, Growth)
+    category: equity
+    url: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+
+  - id: hdfc-gold-etf-fof
+    scheme_name: HDFC Gold ETF Fund of Fund (Direct, Growth)
+    category: commodity
+    url: https://groww.in/mutual-funds/hdfc-gold-etf-fund-of-fund-direct-plan-growth
+
+  - id: hdfc-nifty50-index
+    scheme_name: HDFC Nifty 50 Index Fund (Direct, Growth)
+    category: index
+    url: https://groww.in/mutual-funds/hdfc-nifty-50-index-fund-direct-growth
+
+  - id: hdfc-balanced-advantage
+    scheme_name: HDFC Balanced Advantage Fund (Direct, Growth)
+    category: hybrid
+    url: https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+
+  - id: hdfc-short-term-opportunities
+    scheme_name: HDFC Short Term Opportunities Fund (Direct, Growth)
+    category: debt
+    url: https://groww.in/mutual-funds/hdfc-short-term-opportunities-fund-direct-growth
+
+  - id: hdfc-multi-cap
+    scheme_name: HDFC Multi Cap Fund (Direct, Growth)
+    category: equity
+    url: https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth

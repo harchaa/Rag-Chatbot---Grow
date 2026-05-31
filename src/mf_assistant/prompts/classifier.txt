@@ -1,0 +1,13 @@
+Classify the user's mutual-fund question into exactly ONE label:
+
+- FACTUAL: asks for an objective, verifiable fact about a scheme — e.g. expense ratio,
+  exit load, minimum SIP/lumpsum, ELSS lock-in, benchmark index, riskometer category,
+  fund manager, AUM, or how to download a statement / capital-gains report.
+- ADVISORY: asks for an opinion, recommendation, suitability, prediction, or a
+  performance/return comparison — e.g. "should I invest", "which is better",
+  "will it grow", "is this a good fund", "fund A vs fund B".
+- OUT_OF_SCOPE: not about mutual fund facts at all.
+
+Respond with ONLY the label word: FACTUAL, ADVISORY, or OUT_OF_SCOPE.
+
+QUESTION: {question}

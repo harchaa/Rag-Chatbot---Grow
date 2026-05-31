@@ -1,0 +1,22 @@
+# Runtime dependencies (full stack — pulls torch via sentence-transformers).
+# Setup:  python -m venv .venv && source .venv/bin/activate
+#         pip install -r requirements.txt
+
+# --- Core RAG ---
+sentence-transformers>=3.0      # local BGE embeddings + cross-encoder reranker
+chromadb>=0.5                   # persistent vector store
+groq>=0.11                      # Groq LLM inference SDK
+
+# --- Ingestion ---
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+PyYAML>=6.0
+
+# --- Config / UI ---
+pydantic-settings>=2.2
+python-dotenv>=1.0
+streamlit>=1.36
+
+# Install this project so `import mf_assistant` works (src layout).
+-e .

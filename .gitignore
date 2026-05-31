@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments / secrets
+.env
+.venv/
+venv/
+
+# Vector index (build artifact — rebuilt from data/processed/)
+.chroma/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+
+# Model / HF caches (if downloaded locally)
+hf_cache/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
