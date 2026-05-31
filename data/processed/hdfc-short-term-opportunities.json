@@ -1,0 +1,68 @@
+{
+  "id": "hdfc-short-term-opportunities",
+  "source_url": "https://groww.in/mutual-funds/hdfc-short-term-opportunities-fund-direct-growth",
+  "source_type": "groww_scheme_page",
+  "fetched_at": "2026-05-31",
+  "scheme": {
+    "fund_name": "HDFC Short Term Debt Fund",
+    "scheme_name": "HDFC Short Term Debt Fund Direct Plan Growth",
+    "amc": "HDFC Mutual Fund",
+    "category": "Debt",
+    "sub_category": "Short Duration",
+    "plan_type": "Direct",
+    "scheme_type": "Growth",
+    "isin": "INF179K01YM7",
+    "scheme_code": "119016",
+    "launch_date": "01-Jan-2013",
+    "fund_manager": "Anil Bamboli",
+    "benchmark": "CRISIL Short Duration Debt A-II Index",
+    "riskometer": "Moderately Low"
+  },
+  "facts": {
+    "expense_ratio_pct": "0.39",
+    "exit_load": "Nil",
+    "lock_in": "No lock-in period",
+    "min_sip": 100,
+    "min_lumpsum": 100,
+    "min_additional": 100,
+    "min_withdrawal": 100,
+    "sip_allowed": true,
+    "lumpsum_allowed": true,
+    "stamp_duty": "0.005% (from July 1st, 2020)",
+    "registrar": "CAMS",
+    "aum_crore": 15462.916,
+    "nav": 34.5755,
+    "nav_date": "29-May-2026",
+    "taxation": "Returns are taxed as per your Income Tax slab."
+  },
+  "sections": [
+    {
+      "title": "Overview",
+      "text": "HDFC Short Term Debt Fund is a Short Duration Debt mutual fund offered by HDFC Mutual Fund. Its riskometer classification is Moderately Low. Its benchmark index is CRISIL Short Duration Debt A-II Index. The fund manager is Anil Bamboli. It was launched on 01-Jan-2013. Its ISIN is INF179K01YM7."
+    },
+    {
+      "title": "Fees and Charges",
+      "text": "The expense ratio of HDFC Short Term Debt Fund is 0.39%. The exit load is: Nil. Stamp duty is 0.005% (from July 1st, 2020)."
+    },
+    {
+      "title": "Investment Limits",
+      "text": "The minimum SIP investment is ₹100. The minimum lumpsum (one-time) investment is ₹100. The minimum additional investment is ₹100. The minimum withdrawal amount is ₹100. Lock-in: No lock-in period. SIP investment is allowed."
+    },
+    {
+      "title": "Taxation",
+      "text": "Taxation for HDFC Short Term Debt Fund (category: Debt): Returns are taxed as per your Income Tax slab."
+    },
+    {
+      "title": "Fund Size and NAV",
+      "text": "The assets under management (AUM) is approximately ₹15,462.92 crore. The latest NAV is ₹34.5755 as of 29-May-2026."
+    },
+    {
+      "title": "Fund House and Registrar",
+      "text": "The registrar and transfer agent (RTA) for HDFC Short Term Debt Fund is CAMS. The AMC (HDFC Mutual Fund) registered address is \"HDFC House\", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020."
+    },
+    {
+      "title": "Scheme Description",
+      "text": "The scheme seeks to generate regular income through investment in debt securities and money market instruments."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "hdfc-nifty50-index",
+  "source_url": "https://groww.in/mutual-funds/hdfc-nifty-50-index-fund-direct-growth",
+  "source_type": "groww_scheme_page",
+  "fetched_at": "2026-05-31",
+  "scheme": {
+    "fund_name": "HDFC NIFTY 50 Index Fund",
+    "scheme_name": "HDFC NIFTY 50 Index Fund Direct Growth",
+    "amc": "HDFC Mutual Fund",
+    "category": "Equity",
+    "sub_category": "Large Cap",
+    "plan_type": "Direct",
+    "scheme_type": "Growth",
+    "isin": "INF179K01WM1",
+    "scheme_code": "119063",
+    "launch_date": "01-Jan-2013",
+    "fund_manager": "Krishan Daga",
+    "benchmark": "NIFTY 50 Total Return Index",
+    "riskometer": "Moderately High"
+  },
+  "facts": {
+    "expense_ratio_pct": "0.26",
+    "exit_load": "Exit load of 0.25% if redeemed within 3 days",
+    "lock_in": "No lock-in period",
+    "min_sip": 100,
+    "min_lumpsum": 100,
+    "min_additional": 100,
+    "min_withdrawal": 100,
+    "sip_allowed": true,
+    "lumpsum_allowed": true,
+    "stamp_duty": "0.005% (from July 1st, 2020)",
+    "registrar": "CAMS",
+    "aum_crore": 23339.5619,
+    "nav": 229.2493,
+    "nav_date": "29-May-2026",
+    "taxation": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%."
+  },
+  "sections": [
+    {
+      "title": "Overview",
+      "text": "HDFC NIFTY 50 Index Fund is a Large Cap Equity mutual fund offered by HDFC Mutual Fund. Its riskometer classification is Moderately High. Its benchmark index is NIFTY 50 Total Return Index. The fund manager is Krishan Daga. It was launched on 01-Jan-2013. Its ISIN is INF179K01WM1."
+    },
+    {
+      "title": "Fees and Charges",
+      "text": "The expense ratio of HDFC NIFTY 50 Index Fund is 0.26%. The exit load is: Exit load of 0.25% if redeemed within 3 days. Stamp duty is 0.005% (from July 1st, 2020)."
+    },
+    {
+      "title": "Investment Limits",
+      "text": "The minimum SIP investment is ₹100. The minimum lumpsum (one-time) investment is ₹100. The minimum additional investment is ₹100. The minimum withdrawal amount is ₹100. Lock-in: No lock-in period. SIP investment is allowed."
+    },
+    {
+      "title": "Taxation",
+      "text": "Taxation for HDFC NIFTY 50 Index Fund (category: Equity): If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%."
+    },
+    {
+      "title": "Fund Size and NAV",
+      "text": "The assets under management (AUM) is approximately ₹23,339.56 crore. The latest NAV is ₹229.2493 as of 29-May-2026."
+    },
+    {
+      "title": "Fund House and Registrar",
+      "text": "The registrar and transfer agent (RTA) for HDFC NIFTY 50 Index Fund is CAMS. The AMC (HDFC Mutual Fund) registered address is \"HDFC House\", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020."
+    },
+    {
+      "title": "Scheme Description",
+      "text": "The Scheme seeks to generate returns that are commensurate with the performance of the NIFTY 50 Index, subject to tracking errors."
+    }
+  ]
+}

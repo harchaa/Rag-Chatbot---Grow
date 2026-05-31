@@ -14,6 +14,11 @@ venv/
 # Vector index (build artifact — rebuilt from data/processed/)
 .chroma/
 
+# Raw scrape snapshots: large + volatile (daily NAV churn). Local cache only;
+# data/processed/ is the versioned, human-readable audit trail.
+data/raw/*
+!data/raw/.gitkeep
+
 # Caches
 .pytest_cache/
 .ruff_cache/
