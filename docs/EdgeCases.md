@@ -71,17 +71,17 @@ and are run with `pytest`; cases that can't be automated yet are checked manuall
 
 ---
 
-## Phase 2 — Chunking, embedding & indexing  ⏳
+## Phase 2 — Chunking, embedding & indexing  ✅ *(tested in `tests/phase2/test_index.py`)*
 
 | ID | Case | Expected | Status |
 |----|------|----------|--------|
-| P2-1 | Section text shorter than chunk size | kept as a single chunk | ⏳ |
-| P2-2 | Section longer than chunk size | split with overlap, no fact severed mid-sentence where avoidable | ⏳ |
-| P2-3 | Empty/whitespace section | skipped, no zero-length chunk | ⏳ |
-| P2-4 | Every chunk | carries `source_url` + `fetched_at` + `scheme_name` metadata | ⏳ |
-| P2-5 | Re-running `build_index.py` | idempotent — no duplicate chunks | ⏳ |
-| P2-6 | Query embedding | uses BGE query prefix; document embeddings do **not** | ⏳ |
-| P2-7 | Unicode (₹) and punctuation in text | embeds without error | ⏳ |
+| P2-1 | Section text shorter than chunk size | kept as a single chunk | ✅ `test_short_section_is_single_chunk` |
+| P2-2 | Section longer than chunk size | split with overlap, no fact severed mid-sentence where avoidable | ✅ `test_long_section_splits_with_overlap` |
+| P2-3 | Empty/whitespace section | skipped, no zero-length chunk | ✅ `test_empty_section_skipped` |
+| P2-4 | Every chunk | carries `source_url` + `fetched_at` + `scheme_name` metadata | ✅ `test_chunk_metadata_fields_present` |
+| P2-5 | Re-running `build_index.py` | idempotent — no duplicate chunks | ✅ `test_upsert_idempotent` |
+| P2-6 | Query embedding | uses BGE query prefix; document embeddings do **not** | ✅ `test_embed_query_uses_prefix` / `test_embed_documents_no_prefix` |
+| P2-7 | Unicode (₹) and punctuation in text | embeds without error | ✅ `test_unicode_and_rupee_symbol_handled` |
 
 ---
 
