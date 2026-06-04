@@ -85,17 +85,17 @@ and are run with `pytest`; cases that can't be automated yet are checked manuall
 
 ---
 
-## Phase 3 — Retrieval & generation  ⏳
+## Phase 3 — Retrieval & generation  ✅ *(tested in `tests/phase3/test_pipeline.py`)*
 
 | ID | Case | Expected | Status |
 |----|------|----------|--------|
-| P3-1 | "Expense ratio of HDFC Mid Cap?" | correct chunk retrieved + cited | ⏳ (C-3) |
-| P3-2 | Fact not in corpus ("fund manager's salary") | best score < τ → "not in my sources" | ⏳ |
-| P3-3 | Two schemes share a fact type | the asked scheme's source is cited | ⏳ |
-| P3-4 | Answer length | ≤ 3 sentences | ⏳ (C-2) |
-| P3-5 | Model tries to emit a URL in the body | stripped; citation added deterministically | ⏳ (C-3) |
-| P3-6 | Groq API timeout/error | graceful error message, no crash | ⏳ |
-| P3-7 | Empty / whitespace-only query | handled, prompts for a real question | ⏳ |
+| P3-1 | "Expense ratio of HDFC Mid Cap?" | correct chunk retrieved + cited | ✅ `test_factual_happy_path` + 🔎 live smoke test |
+| P3-2 | Fact not in corpus ("fund manager's salary") | best score < τ → "not in my sources" | ✅ `test_not_in_sources_low_score` |
+| P3-3 | Two schemes share a fact type | the asked scheme's source is cited | ✅ `test_factual_happy_path` (citation from metadata) |
+| P3-4 | Answer length | ≤ 3 sentences | ✅ `test_answer_capped_at_3_sentences` |
+| P3-5 | Model tries to emit a URL in the body | stripped; citation added deterministically | ✅ `test_url_stripped_from_answer_body` + `test_citation_attached_from_metadata` |
+| P3-6 | Groq API timeout/error | graceful error message, no crash | ✅ `test_groq_error_handled` |
+| P3-7 | Empty / whitespace-only query | handled, prompts for a real question | ✅ `test_empty_query_handled` |
 
 ---
 
