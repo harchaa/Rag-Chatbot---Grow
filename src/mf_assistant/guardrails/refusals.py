@@ -1,9 +1,16 @@
-"""Polite refusal copy + educational links for advisory and OOS queries."""
+"""Polite refusal copy + educational/factsheet links for non-factual queries.
+
+PERFORMANCE refusals are distinct from ADVISORY: the problem statement requires
+pointing the user to the official factsheet (not a generic AMFI page) for any
+returns or performance questions.
+"""
 
 from __future__ import annotations
 
 _AMFI_EDU = "https://www.amfiindia.com/investor-corner/knowledge-center"
 _SEBI_EDU = "https://www.sebi.gov.in/investor-corner.html"
+# HDFC MF factsheets listing page — official source for all performance data
+_HDFC_FACTSHEET = "https://www.hdfcfund.com/resources/factsheets"
 
 _REFUSALS = {
     "ADVISORY": {
@@ -13,6 +20,14 @@ _REFUSALS = {
             "For investment guidance, please consult a SEBI-registered financial advisor."
         ),
         "edu_link": _AMFI_EDU,
+    },
+    "PERFORMANCE": {
+        "message": (
+            "I don't provide returns, performance data, or NAV history. "
+            "For accurate and up-to-date performance information, "
+            "please refer to the official HDFC Mutual Fund factsheet."
+        ),
+        "edu_link": _HDFC_FACTSHEET,
     },
     "OUT_OF_SCOPE": {
         "message": (

@@ -53,7 +53,7 @@ def classify_intent(question: str) -> str:
             timeout=settings.llm_timeout_seconds,
         )
         label = resp.choices[0].message.content.strip().upper()
-        if label in {"FACTUAL", "ADVISORY", "OUT_OF_SCOPE"}:
+        if label in {"FACTUAL", "ADVISORY", "PERFORMANCE", "OUT_OF_SCOPE"}:
             return label
         # Model returned something unexpected — treat as factual and let retrieval decide
         return "FACTUAL"

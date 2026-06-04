@@ -37,7 +37,7 @@ class RAGResult:
     citation_url: str = ""
     fetched_at: str = ""
     was_refused: bool = False
-    refusal_reason: str = ""         # "advisory" | "out_of_scope" | "pii" | "not_in_sources"
+    refusal_reason: str = ""   # "advisory"|"performance"|"out_of_scope"|"pii"|"not_in_sources"
     debug: dict = field(default_factory=dict)
 
 
@@ -53,9 +53,9 @@ def ask(question: str, *, debug: bool = False) -> RAGResult:
             refusal_reason="pii",
         )
 
-    # ② Intent classification
+    # ② Intent classification  (FACTUAL proceeds; everything else is refused)
     intent = classify(q)
-    if intent != "FACTUAL":
+    if intent not in ("FACTUAL",):
         resp = refusal_response(intent)
         return RAGResult(
             answer=resp["message"],
