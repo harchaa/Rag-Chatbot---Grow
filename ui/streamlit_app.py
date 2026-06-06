@@ -1,6 +1,7 @@
 """Phase 5 — Streamlit chat UI for MF Facts Assistant.
 
-Run:  streamlit run ui/streamlit_app.py
+Run locally:  streamlit run ui/streamlit_app.py
+Deploy:       Streamlit Community Cloud — set GROQ_API_KEY + USE_RERANKER=false in secrets.
 """
 
 from __future__ import annotations
@@ -9,6 +10,40 @@ import html
 from urllib.parse import urlparse
 
 import streamlit as st
+
+# ── Startup: build Chroma index if missing (needed on cloud deployments) ──────
+@st.cache_resource(show_spinner=False)
+def _ensure_index() -> None:
+    """Embed & index data/processed/ if the collection is empty.
+
+    Runs once per server start. On Streamlit Cloud (ephemeral disk) this takes
+    ~60-90 seconds on cold start; subsequent page loads hit the cache instantly.
+    """
+    import json
+    from mf_assistant.config import settings
+    from mf_assistant.index.vectorstore import count, _collection, _clean_meta
+    from mf_assistant.ingestion.chunker import chunk_document
+    from mf_assistant.index.embedder import embed_documents
+
+    if count() > 0:
+        return  # index already populated
+
+    docs = [
+        json.loads(p.read_text(encoding="utf-8"))
+        for p in sorted(settings.processed_dir.glob("*.json"))
+    ]
+    chunks = []
+    for doc in docs:
+        chunks.extend(chunk_document(doc, settings.chunk_size_tokens, settings.chunk_overlap_tokens))
+
+    embeddings = embed_documents([c["text"] for c in chunks])
+    _collection().upsert(
+        ids=[c["chunk_id"] for c in chunks],
+        documents=[c["text"] for c in chunks],
+        embeddings=embeddings,
+        metadatas=[_clean_meta(c["metadata"]) for c in chunks],
+    )
+
 
 from mf_assistant.pipeline.rag import RAGResult, ask
 
@@ -231,6 +266,10 @@ st.markdown("""
   Always verify with official sources.
 </div>
 """, unsafe_allow_html=True)
+
+# ── Ensure index is ready (no-op after first build) ──────────────────────────
+with st.spinner("Loading knowledge base… (first visit may take ~60 s)"):
+    _ensure_index()
 
 # ── Session state ─────────────────────────────────────────────────────────────
 if "messages" not in st.session_state:
