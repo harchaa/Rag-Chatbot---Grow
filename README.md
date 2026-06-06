@@ -69,8 +69,22 @@ python -c "from mf_assistant.config import settings; print(settings.embedding_mo
 # -> BAAI/bge-small-en-v1.5
 ```
 
-> Build/run commands (ingest data, build the index, launch the UI) are added in
-> later phases.
+### Build the corpus and index
+
+```bash
+# Scrape all 8 HDFC scheme pages → data/processed/
+python scripts/refresh_data.py
+
+# Embed + index → .chroma/  (downloads BGE ~130 MB on first run)
+python scripts/build_index.py
+```
+
+### Launch the UI
+
+```bash
+streamlit run ui/streamlit_app.py
+# → http://localhost:8501
+```
 
 ---
 
