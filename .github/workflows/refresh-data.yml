@@ -1,0 +1,45 @@
+name: Refresh MF Data
+
+# Runs on the 1st of every month + on-demand from the Actions tab.
+# Scrapes the Groww scheme pages → updates data/processed/ → commits back.
+# No LLM or embedding model is needed for this job (data refresh only).
+
+on:
+  schedule:
+    - cron: "0 2 1 * *"   # 01st of every month, 02:00 UTC
+  workflow_dispatch:        # manual trigger from GitHub Actions UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to commit updated corpus back to the repo
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install ingestion dependencies
+        run: |
+          pip install --quiet \
+            requests beautifulsoup4 lxml \
+            pyyaml "pydantic-settings>=2.2" "python-dotenv>=1.0"
+          pip install --quiet -e . --no-deps
+
+      - name: Scrape & normalise scheme pages
+        run: python scripts/refresh_data.py
+
+      - name: Commit updated corpus (skip if nothing changed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/processed/
+          git diff --cached --quiet \
+            && echo "No changes — corpus is up to date." \
+            || (git commit -m "chore: refresh MF data $(date -u '+%Y-%m-%d')" && git push)
