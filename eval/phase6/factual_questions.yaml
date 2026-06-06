@@ -1,0 +1,127 @@
+# Factual evaluation set — Phase 6
+# Each question must be answered (not refused) with the correct fact and citation.
+#
+# Fields:
+#   id               short stable identifier
+#   question         the query sent to the pipeline
+#   expected_source  substring that must appear in the citation_url
+#   expected_fact    substring that must appear (case-insensitive) in the answer
+#   fact_type        what kind of fact is being tested
+
+questions:
+
+  # ── HDFC Mid Cap Fund ───────────────────────────────────────────────────────
+  - id: f01
+    question: "What is the expense ratio of HDFC Mid Cap Fund?"
+    expected_source: hdfc-mid-cap
+    expected_fact: "0.73"
+    fact_type: expense_ratio
+
+  - id: f02
+    question: "What is the exit load for HDFC Mid Cap Fund?"
+    expected_source: hdfc-mid-cap
+    expected_fact: "1%"
+    fact_type: exit_load
+
+  - id: f03
+    question: "Who is the fund manager of HDFC Mid Cap Fund?"
+    expected_source: hdfc-mid-cap
+    expected_fact: "Chirag Setalvad"
+    fact_type: fund_manager
+
+  - id: f04
+    question: "Is there a lock-in period for HDFC Mid Cap Fund?"
+    expected_source: hdfc-mid-cap
+    expected_fact: "lock-in"
+    fact_type: lock_in
+
+  # ── HDFC Small Cap Fund ─────────────────────────────────────────────────────
+  - id: f05
+    question: "What is the minimum SIP amount for HDFC Small Cap Fund?"
+    expected_source: hdfc-small-cap
+    expected_fact: "100"
+    fact_type: min_sip
+
+  - id: f06
+    question: "What is the benchmark index of HDFC Small Cap Fund?"
+    expected_source: hdfc-small-cap
+    expected_fact: "SmallCap"
+    fact_type: benchmark
+
+  - id: f07
+    question: "What is the riskometer rating of HDFC Small Cap Fund?"
+    expected_source: hdfc-small-cap
+    expected_fact: "Moderately High"
+    fact_type: riskometer
+
+  # ── HDFC NIFTY 50 Index Fund ────────────────────────────────────────────────
+  - id: f08
+    question: "What is the exit load for HDFC NIFTY 50 Index Fund?"
+    expected_source: hdfc-nifty-50
+    expected_fact: "0.25%"
+    fact_type: exit_load
+
+  - id: f09
+    question: "What is the expense ratio of HDFC NIFTY 50 Index Fund?"
+    expected_source: hdfc-nifty-50
+    expected_fact: "0.26"
+    fact_type: expense_ratio
+
+  # ── HDFC Gold ETF Fund ──────────────────────────────────────────────────────
+  - id: f10
+    question: "What is the expense ratio of HDFC Gold ETF Fund?"
+    expected_source: hdfc-gold-etf
+    expected_fact: "0.2"
+    fact_type: expense_ratio
+
+  - id: f11
+    question: "What is the exit load for HDFC Gold ETF Fund of Fund?"
+    expected_source: hdfc-gold-etf
+    expected_fact: "15 days"
+    fact_type: exit_load
+
+  # ── HDFC Balanced Advantage Fund ───────────────────────────────────────────
+  - id: f12
+    question: "Who manages the HDFC Balanced Advantage Fund?"
+    expected_source: hdfc-balanced-advantage
+    expected_fact: "Ravuri"
+    fact_type: fund_manager
+
+  - id: f13
+    question: "What is the expense ratio of HDFC Balanced Advantage Fund?"
+    expected_source: hdfc-balanced-advantage
+    expected_fact: "0.75"
+    fact_type: expense_ratio
+
+  # ── HDFC Short Term Debt Fund ───────────────────────────────────────────────
+  - id: f14
+    question: "What is the exit load for HDFC Short Term Debt Fund?"
+    expected_source: hdfc-short-term-opportunities
+    expected_fact: "Nil"
+    fact_type: exit_load
+
+  - id: f15
+    question: "What is the riskometer classification of HDFC Short Term Debt Fund?"
+    expected_source: hdfc-short-term-opportunities
+    expected_fact: "Moderately Low"
+    fact_type: riskometer
+
+  # ── HDFC Multi Cap Fund ─────────────────────────────────────────────────────
+  - id: f16
+    question: "What is the riskometer rating of HDFC Multi Cap Fund?"
+    expected_source: hdfc-multi-cap
+    expected_fact: "Very High"
+    fact_type: riskometer
+
+  - id: f17
+    question: "What is the expense ratio of HDFC Multi Cap Fund?"
+    expected_source: hdfc-multi-cap
+    expected_fact: "0.82"
+    fact_type: expense_ratio
+
+  # ── HDFC Flexi Cap (listed as "equity" slug) ────────────────────────────────
+  - id: f18
+    question: "What is the expense ratio of HDFC Flexi Cap Fund?"
+    expected_source: hdfc-equity
+    expected_fact: "0.68"
+    fact_type: expense_ratio

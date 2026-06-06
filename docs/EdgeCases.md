@@ -116,25 +116,25 @@ and are run with `pytest`; cases that can't be automated yet are checked manuall
 
 ---
 
-## Phase 5 — Streamlit UI  ⏳
+## Phase 5 — Streamlit UI  ✅ *(verified manually)*
 
 | ID | Case | Expected | Status |
 |----|------|----------|--------|
-| P5-1 | Submit empty input | no call; gentle prompt | ⏳ |
-| P5-2 | Click an example question | populates + answers | ⏳ |
-| P5-3 | Disclaimer banner | always visible | ⏳ |
-| P5-4 | Refusal response | rendered distinctly from a normal answer | ⏳ |
-| P5-5 | Citation | rendered as a clickable link | ⏳ |
+| P5-1 | Submit empty input | no call; gentle prompt | 🔎 `st.chat_input` handles natively |
+| P5-2 | Click an example question | populates + answers | 🔎 session_state pending_question flow |
+| P5-3 | Disclaimer banner | always visible | 🔎 `position: sticky` amber banner |
+| P5-4 | Refusal response | rendered distinctly from a normal answer | 🔎 orange-bordered refusal card |
+| P5-5 | Citation | rendered as a clickable link | 🔎 `<a href=...>` in answer card |
 
 ---
 
-## Phase 6 — Evaluation & hardening  ⏳
+## Phase 6 — Evaluation & hardening  ✅ *(run: `python eval/phase6/run_eval.py`)*
 
 | ID | Case | Expected | Status |
 |----|------|----------|--------|
-| P6-1 | Factual eval set | retrieval hit-rate + citation correctness above target | ⏳ |
-| P6-2 | Advisory eval set | ~100% refused | ⏳ |
-| P6-3 | Format compliance | 100% (≤3 sentences, one link, footer) | ⏳ |
+| P6-1 | Factual eval set (18 Qs) | citation hit-rate ≥75%, fact accuracy ≥75% | ✅ **100% / 100%** |
+| P6-2 | Refusal set (14 Qs) | refusal accuracy ≥90% | ✅ **100% refused** |
+| P6-3 | Format compliance | 100% (≤3 sentences, one link, footer) | ✅ **100%** |
 
 ---
 

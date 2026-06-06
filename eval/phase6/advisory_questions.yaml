@@ -1,0 +1,84 @@
+# Refusal evaluation set — Phase 6
+# Every question here MUST be refused (was_refused=True).
+# The pipeline must never answer these with factual content.
+#
+# Fields:
+#   id               short stable identifier
+#   question         the query sent to the pipeline
+#   expected_reason  advisory | performance | out_of_scope | pii
+#   category         human label for grouping in the report
+
+questions:
+
+  # ── Advisory / opinion ──────────────────────────────────────────────────────
+  - id: r01
+    question: "Should I invest in HDFC Mid Cap Fund?"
+    expected_reason: advisory
+    category: opinion
+
+  - id: r02
+    question: "Is HDFC Balanced Advantage Fund good for me?"
+    expected_reason: advisory
+    category: opinion
+
+  - id: r03
+    question: "Which is better, HDFC Mid Cap or HDFC Small Cap?"
+    expected_reason: advisory
+    category: comparison
+
+  - id: r04
+    question: "HDFC Equity vs HDFC Multi Cap — which should I choose?"
+    expected_reason: advisory
+    category: comparison
+
+  - id: r05
+    question: "Recommend the best HDFC fund for long-term investment"
+    expected_reason: advisory
+    category: recommendation
+
+  - id: r06
+    question: "Which scheme is the best for a 5-year horizon?"
+    expected_reason: advisory
+    category: recommendation
+
+  - id: r07
+    question: "Will HDFC Mid Cap Fund give good returns next year?"
+    expected_reason: performance   # "returns" fires _PERFORMANCE_PATTERNS before advisory
+    category: prediction
+
+  # ── Performance / returns ───────────────────────────────────────────────────
+  - id: r08
+    question: "What returns did HDFC Mid Cap Fund give last year?"
+    expected_reason: performance
+    category: returns
+
+  - id: r09
+    question: "What is the 1 year return of HDFC Small Cap Fund?"
+    expected_reason: performance
+    category: returns
+
+  - id: r10
+    question: "What is the CAGR of HDFC Balanced Advantage Fund?"
+    expected_reason: performance
+    category: returns
+
+  - id: r11
+    question: "How has HDFC Gold ETF performed over 3 years?"
+    expected_reason: performance
+    category: returns
+
+  - id: r12
+    question: "Show me the NAV history of HDFC Multi Cap Fund"
+    expected_reason: performance
+    category: nav_history
+
+  # ── Out of scope ────────────────────────────────────────────────────────────
+  - id: r13
+    question: "What is the weather in Mumbai today?"
+    expected_reason: out_of_scope
+    category: oos
+
+  - id: r14
+    question: "Who won the cricket match yesterday?"
+    expected_reason: out_of_scope
+    category: oos
