@@ -343,7 +343,7 @@ def _render_answer(r: RAGResult) -> None:
 
 
 def _render_refusal(r: RAGResult) -> None:
-    url = r.citation_url or "https://groww.in/mutual-funds/hdfc-mutual-funds"
+    url = r.citation_url or "https://groww.in/mutual-funds/amc/hdfc-mutual-funds"
     st.markdown(f"""
 <div class="refusal-card">
   <p class="refusal-text">🚫&nbsp;&nbsp;{html.escape(r.answer)}</p>
@@ -382,7 +382,7 @@ if _question:
             answer="Sorry, I couldn't process that request. Please try again.",
             was_refused=True,
             refusal_reason="error",
-            citation_url="https://groww.in/mutual-funds/hdfc-mutual-funds",
+            citation_url="https://groww.in/mutual-funds/amc/hdfc-mutual-funds",
         )
     st.session_state.messages.append({"role": "assistant", "result": _result})
     st.rerun()

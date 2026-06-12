@@ -6,7 +6,7 @@ All links stay within Groww — no external AMFI/SEBI/AMC URLs.
 from __future__ import annotations
 
 # All refusal links point to Groww's HDFC MF section — consistent with the corpus
-_GROWW_HDFC = "https://groww.in/mutual-funds/hdfc-mutual-funds"
+_GROWW_HDFC = "https://groww.in/mutual-funds/amc/hdfc-mutual-funds"
 
 _REFUSALS = {
     "ADVISORY": {

@@ -59,14 +59,14 @@ def test_performance_queries_caught_by_rules(q):  # P4-3
 
 def test_performance_refusal_points_to_groww():  # P4-3
     resp = refusal_response("PERFORMANCE")
-    assert "groww.in" in resp["edu_link"]
+    assert "groww.in/mutual-funds/amc/hdfc-mutual-funds" in resp["edu_link"]
     assert "performance" in resp["message"].lower() or "returns" in resp["message"].lower()
 
 
 def test_all_refusals_use_groww_links():  # P4-3
     for intent in ("ADVISORY", "PERFORMANCE", "OUT_OF_SCOPE"):
         resp = refusal_response(intent)
-        assert "groww.in" in resp["edu_link"], f"{intent} refusal should link to Groww"
+        assert "groww.in/mutual-funds/amc/hdfc-mutual-funds" in resp["edu_link"], f"{intent} refusal should link to Groww"
 
 
 def test_performance_pipeline_refused(monkeypatch):  # P4-3
@@ -77,7 +77,7 @@ def test_performance_pipeline_refused(monkeypatch):  # P4-3
     r = rag.ask("What is the 1 year return of HDFC Mid Cap?")
     assert r.was_refused
     assert r.refusal_reason == "performance"
-    assert "groww.in" in r.citation_url
+    assert "groww.in" in r.citation_url  # points to Groww AMC page
 
 
 # ------------------------------------------------------------------ P4-4/5: PII detection
