@@ -377,9 +377,9 @@ if _question:
     try:
         with st.spinner(""):
             _result = ask(_question)
-    except Exception as _exc:
+    except Exception:
         _result = RAGResult(
-            answer=f"Error ({type(_exc).__name__}): {str(_exc)[:300]}",
+            answer="Something went wrong on my end. Please try again in a moment.",
             was_refused=True,
             refusal_reason="error",
             citation_url="https://groww.in/mutual-funds/amc/hdfc-mutual-funds",
