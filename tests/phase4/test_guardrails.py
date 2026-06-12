@@ -57,18 +57,16 @@ def test_performance_queries_caught_by_rules(q):  # P4-3
     assert _PERFORMANCE_PATTERNS.search(q), f"Should match performance: {q}"
 
 
-def test_performance_refusal_points_to_factsheet():  # P4-3
+def test_performance_refusal_points_to_groww():  # P4-3
     resp = refusal_response("PERFORMANCE")
-    assert "hdfcfund.com" in resp["edu_link"]
+    assert "groww.in" in resp["edu_link"]
     assert "performance" in resp["message"].lower() or "returns" in resp["message"].lower()
-    assert "factsheet" in resp["message"].lower()
 
 
-def test_performance_refusal_not_generic_amfi():  # P4-3
-    perf = refusal_response("PERFORMANCE")
-    advisory = refusal_response("ADVISORY")
-    # They should point to different links — performance → factsheet, advisory → AMFI
-    assert perf["edu_link"] != advisory["edu_link"]
+def test_all_refusals_use_groww_links():  # P4-3
+    for intent in ("ADVISORY", "PERFORMANCE", "OUT_OF_SCOPE"):
+        resp = refusal_response(intent)
+        assert "groww.in" in resp["edu_link"], f"{intent} refusal should link to Groww"
 
 
 def test_performance_pipeline_refused(monkeypatch):  # P4-3
@@ -79,7 +77,7 @@ def test_performance_pipeline_refused(monkeypatch):  # P4-3
     r = rag.ask("What is the 1 year return of HDFC Mid Cap?")
     assert r.was_refused
     assert r.refusal_reason == "performance"
-    assert "hdfcfund.com" in r.citation_url
+    assert "groww.in" in r.citation_url
 
 
 # ------------------------------------------------------------------ P4-4/5: PII detection
