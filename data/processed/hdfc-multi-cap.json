@@ -2,7 +2,7 @@
   "id": "hdfc-multi-cap",
   "source_url": "https://groww.in/mutual-funds/hdfc-multi-cap-fund-direct-growth",
   "source_type": "groww_scheme_page",
-  "fetched_at": "2026-05-31",
+  "fetched_at": "2026-07-01",
   "scheme": {
     "fund_name": "HDFC Multi Cap Fund",
     "scheme_name": "HDFC Multi Cap Fund Direct Growth",
@@ -19,7 +19,7 @@
     "riskometer": "Very High"
   },
   "facts": {
-    "expense_ratio_pct": "0.82",
+    "expense_ratio_pct": "0.96",
     "exit_load": "Exit load of 1% if redeemed within 1 year.",
     "lock_in": "No lock-in period",
     "min_sip": 100,
@@ -30,9 +30,9 @@
     "lumpsum_allowed": true,
     "stamp_duty": "0.005% (from July 1st, 2020)",
     "registrar": "Cams",
-    "aum_crore": 19557.5716,
-    "nav": 19.071,
-    "nav_date": "29-May-2026",
+    "aum_crore": 19580.6842,
+    "nav": 19.608,
+    "nav_date": "30-Jun-2026",
     "taxation": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%."
   },
   "sections": [
@@ -42,7 +42,7 @@
     },
     {
       "title": "Fees and Charges",
-      "text": "The expense ratio of HDFC Multi Cap Fund is 0.82%. The exit load is: Exit load of 1% if redeemed within 1 year. Stamp duty is 0.005% (from July 1st, 2020)."
+      "text": "The expense ratio of HDFC Multi Cap Fund is 0.96%. The exit load is: Exit load of 1% if redeemed within 1 year. Stamp duty is 0.005% (from July 1st, 2020)."
     },
     {
       "title": "Investment Limits",
@@ -54,7 +54,7 @@
     },
     {
       "title": "Fund Size and NAV",
-      "text": "The assets under management (AUM) is approximately ₹19,557.57 crore. The latest NAV is ₹19.071 as of 29-May-2026."
+      "text": "The assets under management (AUM) is approximately ₹19,580.68 crore. The latest NAV is ₹19.608 as of 30-Jun-2026."
     },
     {
       "title": "Fund House and Registrar",

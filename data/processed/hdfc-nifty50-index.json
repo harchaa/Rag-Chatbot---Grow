@@ -2,7 +2,7 @@
   "id": "hdfc-nifty50-index",
   "source_url": "https://groww.in/mutual-funds/hdfc-nifty-50-index-fund-direct-growth",
   "source_type": "groww_scheme_page",
-  "fetched_at": "2026-05-31",
+  "fetched_at": "2026-07-01",
   "scheme": {
     "fund_name": "HDFC NIFTY 50 Index Fund",
     "scheme_name": "HDFC NIFTY 50 Index Fund Direct Growth",
@@ -19,7 +19,7 @@
     "riskometer": "Moderately High"
   },
   "facts": {
-    "expense_ratio_pct": "0.26",
+    "expense_ratio_pct": "0.31",
     "exit_load": "Exit load of 0.25% if redeemed within 3 days",
     "lock_in": "No lock-in period",
     "min_sip": 100,
@@ -30,9 +30,9 @@
     "lumpsum_allowed": true,
     "stamp_duty": "0.005% (from July 1st, 2020)",
     "registrar": "CAMS",
-    "aum_crore": 23339.5619,
-    "nav": 229.2493,
-    "nav_date": "29-May-2026",
+    "aum_crore": 23154.9629,
+    "nav": 233.0091,
+    "nav_date": "30-Jun-2026",
     "taxation": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%."
   },
   "sections": [
@@ -42,7 +42,7 @@
     },
     {
       "title": "Fees and Charges",
-      "text": "The expense ratio of HDFC NIFTY 50 Index Fund is 0.26%. The exit load is: Exit load of 0.25% if redeemed within 3 days. Stamp duty is 0.005% (from July 1st, 2020)."
+      "text": "The expense ratio of HDFC NIFTY 50 Index Fund is 0.31%. The exit load is: Exit load of 0.25% if redeemed within 3 days. Stamp duty is 0.005% (from July 1st, 2020)."
     },
     {
       "title": "Investment Limits",
@@ -54,7 +54,7 @@
     },
     {
       "title": "Fund Size and NAV",
-      "text": "The assets under management (AUM) is approximately ₹23,339.56 crore. The latest NAV is ₹229.2493 as of 29-May-2026."
+      "text": "The assets under management (AUM) is approximately ₹23,154.96 crore. The latest NAV is ₹233.0091 as of 30-Jun-2026."
     },
     {
       "title": "Fund House and Registrar",

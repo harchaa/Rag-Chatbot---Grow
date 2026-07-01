@@ -2,7 +2,7 @@
   "id": "hdfc-balanced-advantage",
   "source_url": "https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth",
   "source_type": "groww_scheme_page",
-  "fetched_at": "2026-05-31",
+  "fetched_at": "2026-07-01",
   "scheme": {
     "fund_name": "HDFC Balanced Advantage Fund",
     "scheme_name": "HDFC Balanced Advantage Fund Direct Growth",
@@ -19,7 +19,7 @@
     "riskometer": "Moderately High"
   },
   "facts": {
-    "expense_ratio_pct": "0.75",
+    "expense_ratio_pct": "0.77",
     "exit_load": "Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.",
     "lock_in": "No lock-in period",
     "min_sip": 100,
@@ -30,9 +30,9 @@
     "lumpsum_allowed": true,
     "stamp_duty": "0.005% (from July 1st, 2020)",
     "registrar": "CAMS",
-    "aum_crore": 105377.6508,
-    "nav": 551.346,
-    "nav_date": "29-May-2026",
+    "aum_crore": 104016.2102,
+    "nav": 564.487,
+    "nav_date": "30-Jun-2026",
     "taxation": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%."
   },
   "sections": [
@@ -42,7 +42,7 @@
     },
     {
       "title": "Fees and Charges",
-      "text": "The expense ratio of HDFC Balanced Advantage Fund is 0.75%. The exit load is: Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year. Stamp duty is 0.005% (from July 1st, 2020)."
+      "text": "The expense ratio of HDFC Balanced Advantage Fund is 0.77%. The exit load is: Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year. Stamp duty is 0.005% (from July 1st, 2020)."
     },
     {
       "title": "Investment Limits",
@@ -54,7 +54,7 @@
     },
     {
       "title": "Fund Size and NAV",
-      "text": "The assets under management (AUM) is approximately ₹105,377.65 crore. The latest NAV is ₹551.346 as of 29-May-2026."
+      "text": "The assets under management (AUM) is approximately ₹104,016.21 crore. The latest NAV is ₹564.487 as of 30-Jun-2026."
     },
     {
       "title": "Fund House and Registrar",
